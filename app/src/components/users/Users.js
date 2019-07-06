@@ -1,19 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 // COMPONENTS
 import UserItem from './UserItem';
 
-export class User extends Component {
-  render() {
+// LOADING
+import Spinner from '../layout/Spinner';
+
+const Users = ({ users, loading }) => {
+  if (loading) {
+    return <Spinner />;
+  } else {
     return (
       <div style={userStyle}>
-        {this.props.users.map(user => (
+        {users.map(user => (
           <UserItem key={user.id} user={user} />
         ))}
       </div>
     );
   }
-}
+};
+
+Users.PropTypes = {
+  users: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired
+};
 
 const userStyle = {
   display: 'grid',
@@ -21,4 +32,4 @@ const userStyle = {
   gridGap: '1rem'
 };
 
-export default User;
+export default Users;
