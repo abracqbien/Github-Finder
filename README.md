@@ -1,2 +1,2 @@
 # Github Finder
-Github Finder - React V16.8+ 2019 
+Github Finder - React V16.8+
