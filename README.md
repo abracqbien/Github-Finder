@@ -1,2 +1,2 @@
-# Cour-Udemy
-Cour Udemy React, Redux, Mongo DB, Express JS, JWT 2019 
+# Github Finder
+Github Finder - React V16.8+ 2019 
